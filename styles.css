@@ -16,22 +16,17 @@ body{
     padding-bottom: 25px;
     padding-top: 25px;
 }
-.container{
+
+.container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    
+    flex-wrap: wrap;  /* Allows the squares to wrap to new rows */
+    justify-content: center; /* Center the grid horizontally */
+    align-self: center;
+    width: 900px;  /* Adjust to the size you want for the container */
+    height: 900px; /* Adjust to the size you want for the container */
 }
 
-.container>div{
-    border: 1px solid black;
-    height: 25px;
-    width: 25px;
-}
-
-.container>div:nth-child(17n + 1) {
-    width: 100%;
-    border: 0;
-    height: 0;
+.container div {
+    box-sizing: border-box;  /* Ensures that padding/border are inside the div's size */
+    border: 1px solid #ccc;  /* Optional, to show grid lines */
 }
